@@ -1,8 +1,19 @@
 class AgentSearchesController < ApplicationController
-
+  include HTTParty
+ 
   def show
     @search = AgentSearch.find(params[:id])
     @agents = Agent.where(id: @search.agent_ids.split(","))
+    
+    puts "==============================================================="
+    profiles = HTTParty.get "https://randomuser.me/api/?results=#{@agents.count.to_s}"
+    # puts profiles["results"][0]["gender"]
+    puts profiles["results"]
+    puts "agent count is: " + @agents.count.to_s 
+    # @agent_count = @agents.count
+    # @agents.each do |x|
+    # end
+    puts "==============================================================="
   end
 
   def create

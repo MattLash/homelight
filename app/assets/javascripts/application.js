@@ -18,22 +18,24 @@
 
 var var1 = [];
 
+var women = [];
+
 $.ajax({
   url: 'https://randomuser.me/api/',
   dataType: 'json',
   success: function(data) {
-    console.log(data);
+    // console.log(data);
     
     // var1 = JSON.parse(data);
     var1 = data;
     
    
-    console.log("this is var1: "+var1);
-    // var1["results"][0].gender
-    console.log("results: " + var1.results[0].gender);
-     return var1;
+    // console.log("this is var1: "+var1);
+    // // var1["results"][0].gender
+    // console.log("results: " + var1.results[0].gender);
+    // return var1;
     
   }
   
-  
 });
+
