@@ -7,13 +7,32 @@ class AgentSearchesController < ApplicationController
     
     puts "==============================================================="
     profiles = HTTParty.get "https://randomuser.me/api/?results=#{@agents.count.to_s}"
+    
     # puts profiles["results"][0]["gender"]
-    puts profiles["results"]
+    # puts profiles["results"]
     puts "agent count is: " + @agents.count.to_s 
-    # @agent_count = @agents.count
+    puts "profile count is: " + profiles["results"].count.to_s
+    @pictures = []
+    
+    profiles["results"].each do |x|
+      # puts profiles["results"][x]
+      @pictures << x["picture"]["medium"]
+      # @agents.picture
+    end
+    
+    # @agents.zip(pictures)
+    
+  
+    
     # @agents.each do |x|
+    #   puts x.photo << pictures[i]
+    #   # i++
     # end
+    
+    puts @pictures
+    
     puts "==============================================================="
+  
   end
 
   def create
