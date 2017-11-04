@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171017002548) do
+ActiveRecord::Schema.define(version: 20171102044112) do
 
   create_table "agent_searches", force: :cascade do |t|
     t.string "txn_side", null: false
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20171017002548) do
     t.string "brokerage", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo_url"
   end
 
 end

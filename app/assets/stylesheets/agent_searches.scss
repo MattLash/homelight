@@ -10,6 +10,12 @@ main {
     overflow: auto;
     padding: 10px;
 
+    .photo{
+      img{
+        width: 100px;
+      }
+    }
+
     .pi {
       float: left;
       width: 150px;

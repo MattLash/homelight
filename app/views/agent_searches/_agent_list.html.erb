@@ -4,7 +4,7 @@
   
   <div class="agent" data-agent-id="<%= agent.id %>">
     <div class="photo">
-        <b>Photo: <%=image_tag "#{@pictures[i]}" %></b>
+        <%=link_to (image_tag "#{agent.photo_url}"), agent_path(agent_id: @agent.id) %>
     </div>
     <div class="pi">
       <div class="name"><%= agent.name %></div>

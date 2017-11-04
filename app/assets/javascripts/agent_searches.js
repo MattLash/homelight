@@ -1,22 +1,22 @@
 // var men2 = [];
 
-function getData(callback){
-  $.ajax({
-    url: 'https://randomuser.me/api/?gender=male&results=10',
-    dataType: 'json',
-    success: function(data){
-      callback(data);
-    }
-  });
+// function getData(callback){
+//   $.ajax({
+//     url: 'https://randomuser.me/api/?gender=male&results=10',
+//     dataType: 'json',
+//     success: function(data){
+//       callback(data);
+//     }
+//   });
 
-};
+// };
 
-getData(function(men){
-  console.log("the output is: " + men.results);
-  for (var i = 0, len = men.results.length; i< len; i++){
-    console.log("gender is: "+ men.results[i].gender);
-  }
-});
+// getData(function(men){
+//   console.log("the output is: " + men.results);
+//   for (var i = 0, len = men.results.length; i< len; i++){
+//     console.log("gender is: "+ men.results[i].gender);
+//   }
+// });
 
 
 

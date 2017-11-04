@@ -14,23 +14,20 @@ class AgentSearchesController < ApplicationController
     puts "profile count is: " + profiles["results"].count.to_s
     @pictures = []
     
-    profiles["results"].each_with_index do |x, index|
-      # puts profiles["results"][x]
-      @pictures << x["picture"]["large"]
-      # puts x
-      puts "the index is: " + index.to_s
+    profiles["results"].each_with_index do |results,i|
+      
+      @agents[i].photo_url = results["picture"]["large"]
+      
+      puts "index is at: " + i.to_s
+      
+      if @agents[i].save
+        puts @agents[i].photo_url + " was saved"
+      else
+        puts "no savie"
+      end
+      @pictures << results["picture"]["large"]
+
     end
-    
-    # @agents.zip(pictures)
-    
-  
-    
-    # @agents.each do |x|
-    #   puts x.photo << pictures[i]
-    #   # i++
-    # end
-    
-    # puts @pictures
     
     puts "==============================================================="
   
