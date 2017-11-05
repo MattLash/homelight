@@ -1,7 +1,7 @@
 %nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
   %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
     %span.navbar-toggler-icon
-  %a.navbar-brand{:href => "#"} Homelight
+  %a.navbar-brand=link_to "Homelight", root_path
   #navbarNav.collapse.navbar-collapse
     %ul.navbar-nav
       %li.nav-item.active
@@ -9,8 +9,7 @@
           Home
           %span.sr-only (current)
       %li.nav-item
-        %a.nav-link{:href => "#"} Features
+        %a.nav-link{:href => "http://www.homelight.com", target: "_blank"} Homelight
       %li.nav-item
         %a.nav-link{:href => "#"} Pricing
-      %li.nav-item
-        %a.nav-link.disabled{:href => "#"} Disabled
+     
