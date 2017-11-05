@@ -1,0 +1,11 @@
+%body
+  %section.content
+    %header
+      %h1 Agent Results
+    %main
+      %p
+        You searched for #{@search.txn_side} a #{@search.prop_type} at #{@search.price_range.gsub("to", " to ").gsub("1mp", "1m p")}
+      = render partial: "agent_list"
+    %footer
+      %p
+        HomeLight Interview Kit © #{Date.today.year}
