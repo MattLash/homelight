@@ -1,3 +1,24 @@
 // Place all the styles related to the agent controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.agent_show_container{
+
+
+	.agent_show_inner{
+		padding-top: 50px;
+		padding-left: 25px;
+		padding-right: 25px;
+		min-height: 1000px;
+		color: #2588C9;
+		background: #f3f3f3;
+
+		.agent_photo{
+			
+			
+			img{
+				width: 200px;
+				border-radius: 5px;
+			}
+		}
+	}
+}
