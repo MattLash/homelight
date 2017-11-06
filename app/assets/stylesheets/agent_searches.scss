@@ -1,28 +1,33 @@
-main {
+.agent_search_show{
+  background: #f3f3f3;
 
-  #results {
-    overflow: auto;
-  }
+  main {
 
-  .agent {
-    border: 1px solid #333;
-    margin: 10px;
-    overflow: auto;
-    padding: 10px;
+    #results {
+      overflow: auto;
+    }
 
-    .photo{
-      img{
-        width: 100px;
+    .agent {
+      border: 1px solid #333;
+      margin: 10px;
+      overflow: auto;
+      padding: 10px;
+      border-radius: 5px;
+
+      .photo{
+        img{
+          width: 100px;
+        }
       }
-    }
 
-    .pi {
-      float: left;
-      width: 150px;
-    }
+      .pi {
+        float: left;
+        width: 150px;
+      }
 
-    .stats {
-      float: left;
+      .stats {
+        float: left;
+      }
     }
   }
 }

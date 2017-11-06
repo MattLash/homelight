@@ -1,17 +1,20 @@
 - @agents.each_with_index do |agent,i|
   .agent{"data-agent-id" => "#{agent.id}"}
-    .photo
-      = link_to (image_tag "#{agent.photo_url}"), agent_path(agent)
-    .pi
-      .name= agent.name
-      .brokerage= agent.brokerage
-    .stats
-      .side-stats
-        %b Side:
-        Buyers: #{agent.agent_stat.buyers} Sellers: #{agent.agent_stat.sellers}
-      .type-stats
-        %b Type:
-        SFH: #{agent.agent_stat.sfh} Condo: #{agent.agent_stat.condo} Townhome: #{agent.agent_stat.townhome} Mobile: #{agent.agent_stat.mobile} Land: #{agent.agent_stat.land}
-      .price-stats
-        %b Price:
-        $0 - $150k: #{agent.agent_stat.pr1} $150k - $300k: #{agent.agent_stat.pr2} $300k - $500k: #{agent.agent_stat.pr3} $500k - $750k: #{agent.agent_stat.pr4} $750k - $1m: #{agent.agent_stat.pr5} $1m+: #{agent.agent_stat.pr6}
+    .row
+      .col-sm-2
+        .photo
+          = link_to (image_tag "#{agent.photo_url}"), agent_path(agent)
+        .pi
+          .name= agent.name
+          .brokerage= agent.brokerage
+      .col-sm-10
+        .stats
+          .side-stats
+            %b Side:
+            Buyers: #{agent.agent_stat.buyers} Sellers: #{agent.agent_stat.sellers}
+          .type-stats
+            %b Type:
+            SFH: #{agent.agent_stat.sfh} Condo: #{agent.agent_stat.condo} Townhome: #{agent.agent_stat.townhome} Mobile: #{agent.agent_stat.mobile} Land: #{agent.agent_stat.land}
+          .price-stats
+            %b Price:
+            $0 - $150k: #{agent.agent_stat.pr1} $150k - $300k: #{agent.agent_stat.pr2} $300k - $500k: #{agent.agent_stat.pr3} $500k - $750k: #{agent.agent_stat.pr4} $750k - $1m: #{agent.agent_stat.pr5} $1m+: #{agent.agent_stat.pr6}

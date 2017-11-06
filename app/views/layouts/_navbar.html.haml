@@ -5,9 +5,8 @@
   #navbarNav.collapse.navbar-collapse
     %ul.navbar-nav
       %li.nav-item.active
-        %a.nav-link{:href => "#"}
-          Home
-          %span.sr-only (current)
+        %a.nav-link=link_to "Home", root_path
+
       %li.nav-item
         %a.nav-link{:href => "http://www.homelight.com", target: "_blank"} Homelight
       %li.nav-item
